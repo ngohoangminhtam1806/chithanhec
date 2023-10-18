@@ -109,8 +109,8 @@ section {
 }
 
 .hero-text h1 {
-	font-family: 'Macondo', cursive;
-	font-size: 33px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
 	line-height: 1;
 	color: black;
 	margin: 0 0 45px;
@@ -257,6 +257,9 @@ section {
     width: 100%;
     height: auto;
   }
+	.hero-text a.ctaa {
+		margin-left: 10px;
+	}
 }
 
 /* END Content */
