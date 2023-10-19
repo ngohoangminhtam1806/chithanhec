@@ -27,11 +27,59 @@ function isMobile() {
   return window.innerWidth < 768;
 }
 
-// Index
-sr.reveal('.hero-text', {deplay: 200, origin: 'top'});
-sr.reveal('.hero-img', {deplay: 450, origin: 'top'});
-sr.reveal('.icons', {deplay: 500, origin: 'left'});
-sr.reveal('.scroll-down', {deplay: 500, origin: 'right'});
+// Kích hoạt lăn chuột bằng JavaScript
+const scrollableContent = document.querySelector('.scrollable-content');
+let isScrolling = false;
+let startY = 0;
+let scrollY = 0;
+
+scrollableContent.addEventListener('mousedown', (e) => {
+  isScrolling = true;
+  startY = e.clientY;
+  e.preventDefault();
+});
+
+scrollableContent.addEventListener('mouseup', () => {
+  isScrolling = false;
+  startY = 0;
+  scrollY = 0;
+});
+
+scrollableContent.addEventListener('mousemove', (e) => {
+  if (isScrolling) {
+    const deltaY = startY - e.clientY;
+    scrollableContent.scrollTop += deltaY;
+    startY = e.clientY;
+  }
+});
+
+scrollableContent.addEventListener('touchstart', (e) => {
+  isScrolling = true;
+  startY = e.touches[0].clientY;
+  e.preventDefault();
+});
+
+scrollableContent.addEventListener('touchend', () => {
+  isScrolling = false;
+  startY = 0;
+  scrollY = 0;
+});
+
+scrollableContent.addEventListener('touchmove', (e) => {
+  if (isScrolling) {
+    const deltaY = startY - e.touches[0].clientY;
+    scrollY += deltaY;
+    if (Math.abs(scrollY) >= 5) {
+      scrollableContent.scrollTop += deltaY;
+      startY = e.touches[0].clientY;
+      scrollY = 0;
+    }
+  }
+});
+
+scrollableContent.addEventListener('wheel', (e) => {
+  scrollableContent.scrollTop += e.deltaY;
+});
 
 // Introduce
 sr.reveal('.carousel', {deplay: 500, origin: 'top'});
@@ -46,13 +94,11 @@ sr.reveal('.hero-solution .logo h6', {deplay: 200, origin: 'left'});
 sr.reveal('.hero-solution .logo img', {deplay: 200, origin: 'right'});
 
 // Project
-sr.reveal('.hero-project .logo h2', {deplay: 200, origin: 'top'});
 sr.reveal('.hero-project .logo h6', {deplay: 200, origin: 'left'});
 sr.reveal('.hero-project .logo img', {deplay: 200, origin: 'right'});
 
 if (isDesktop()) {
-	sr.reveal('.hero-project .content-flex-right', {deplay: 450, origin: 'right'});
-	sr.reveal('.hero-project .content-flex-left', {deplay: 450, origin: 'left'});
+	sr.reveal('.hero-project', {deplay: 200, origin: 'bottom'});
 }
 
 // Contact
@@ -60,7 +106,5 @@ sr.reveal('.hero-contact .logo h2', {deplay: 200, origin: 'top'});
 sr.reveal('.hero-contact .logo h6', {deplay: 200, origin: 'left'});
 sr.reveal('.hero-contact .logo img', {deplay: 200, origin: 'right'});
 
-if (isDesktop()) {
-	sr.reveal('.hero-contact p', {deplay: 450, origin: 'top'});
-	sr.reveal('.hero-contact .centered-horizontal-line', {deplay: 450, origin: 'bottom'});
-}
+sr.reveal('.hero-contact p', {deplay: 450, origin: 'top'});
+sr.reveal('.hero-contact .centered-horizontal-line', {deplay: 450, origin: 'bottom'});

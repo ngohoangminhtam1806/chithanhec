@@ -57,7 +57,7 @@ section {
 	padding: 0 19%;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1350px) {
   #menu-icon {
     display: block;
   }
@@ -186,14 +186,25 @@ section {
 	transform: translateY(-5px);
 }
 
+#message-list {
+	right: 8%; /* Điều chỉnh giá trị theo ý muốn */
+	bottom: 12%;
+	display: none;
+	position: absolute;
+	background-color: transparent; /* Màu nền của popup */
+	border: 1px solid transparent; /* Đường viền của popup */
+	border-radius: 10px;
+	z-index: 1000; /* Đảm bảo popup hiển thị trên tất cả các phần tử khác */
+}
+
 .scroll-down {
+	display: block;
 	position: absolute;
 	bottom: 6%;
-	right: 9%;
+	right: 10%;
 }
 
 .scroll-down i {
-	display: block;
 	padding: 12px;
 	font-size: 25px;
 	color: black;
@@ -267,7 +278,6 @@ section {
 @media (max-width: 1460px) {
 	.navlist a{
 		font-size: 15px;
-		margin-left: 20px;
 	}
   section {
     padding: 0 12%;

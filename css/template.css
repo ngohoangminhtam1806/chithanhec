@@ -7,6 +7,11 @@
 	text-decoration: none;
 }
 
+.scrollable-content {
+  height: 100vh; /* Đảm bảo chiều cao của phần tử để lăn chuột */
+  overflow: hidden; /* Ẩn thanh cuộn */
+}
+
 /* Header */
 img {
   display: block;
@@ -58,13 +63,6 @@ header .navlist {
 }
 
 @media (max-width: 1350px) {
-	.navlist a{
-		font-size: 15px;
-		margin-left: 10px;
-	}
-}
-
-@media (max-width: 990px) {
   #menu-icon {
     display: block;
   }
@@ -179,9 +177,6 @@ header .navlist {
 
 /* Điều chỉnh font-size và lề cho các kích thước màn hình khác nhau */
 @media screen and (max-width: 768px) {
-	.hero-introduce {
-		margin-top: 200px;
-	}
   .hero-introduce p,
   .hero-introduce ul,
   .hero-introduce strong h5 {
@@ -267,7 +262,7 @@ header .navlist {
 /* CSS cho màn hình nhỏ hơn 768px (di động) */
 @media screen and (max-width: 768px) {
 	.content-project h5 {
-		font-size: 13px;
+		font-size: 15px;
 	}
 	.hero-project .logo {
 		text-align: center;
@@ -351,6 +346,10 @@ header .navlist {
 	width: 50px;
 }
 
+.hero-contact p img {
+	width: 30px;
+}
+
 /* LINE */
 .centered-horizontal-line {
   text-align: center; /* Căn giữa nội dung theo chiều ngang */
@@ -369,18 +368,3 @@ header .navlist {
 }
 
 /* END Contact */
-
-/* Tạo thanh cuộn trong suốt */
-::-webkit-scrollbar-track {
-  background: transparent; /* Đặt màu nền trong suốt cho thanh cuộn */
-}
-
-::-webkit-scrollbar-thumb {
-  background: transparent; /* Đặt màu cho phần "nút bấm" của thanh cuộn */
-  border-radius: 5px; /* Điều chỉnh đường viền (nếu cần) */
-}
-
-/* Điều chỉnh màu cho nút bấm khi di chuột vào thanh cuộn */
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
