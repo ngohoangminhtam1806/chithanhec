@@ -159,9 +159,17 @@ header .navlist {
   max-width: 100%;
 }
 
-.hero-introduce h2 {
-  text-align: center;
-  color: #007fff;
+.hero-introduce .logo h2,
+.hero-introduce .logo h6 {
+	text-align: center;
+}
+
+.hero-introduce .logo h2 {
+	color: #007fff;
+}
+
+.hero-introduce .logo img {
+	width: 50px;
 }
 
 .hero-introduce p,
@@ -203,22 +211,154 @@ header .navlist {
 
 /* Solutions */
 .hero-solution {
-  margin-top: 200px;
-	text-align: center;
-}
-
-.hero-solution h2 {
-  text-align: center;
-  color: #007fff;
+	display: block;
 }
 
 .hero-solution .logo {
-	padding-bottom: 50px;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.hero-solution .logo h2 {
+	margin-top: 200px;
+  color: #007fff;
 }
 
 .hero-solution .logo img {
 	width: 50px;
 }
+
+.hero-solution .content-flex-right,
+.hero-solution .content-flex-left {
+	display: flex;
+	justify-content: center;
+	/* gap: 10px;
+	margin-top: 50px; */
+}
+
+.hero-solution .content-flex-right img,
+.hero-solution .content-flex-left img {
+	width: 500px;
+	margin: 0;
+}
+
+.hero-solution .content-flex-right .content-solution,
+.hero-solution .content-flex-left .content-solution {
+	width: 500px;
+}
+
+.hero-solution .content-flex-right h5,
+.hero-solution .content-flex-left h5 {
+	color: #007fff;
+}
+
+.hero-solution .content-flex-right .content-solution,
+.hero-solution .content-flex-left .content-solution {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	align-self: center;
+}
+
+.hero-solution .content-flex-center {
+	margin-top: 50px;
+}
+
+.hero-solution .content-flex-center .content-solution {
+	text-align: center;
+}
+
+.hero-solution .content-flex-center .content-solution h5 {
+	color: #007fff;
+}
+
+.container-logo-hethong {
+	margin-top: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.hero-solution .content-flex-right img,
+.hero-solution .content-flex-left img,
+.content-flex-center img,
+.container-logo-hethong .row .col img {
+	border-radius: 5px;
+}
+
+.hero-solution .content-flex-right img:hover{
+	transition: all .50s ease;
+	transform: translateX(-10px);
+	filter: brightness(70%); /* Điều chỉnh giá trị brightness để làm mờ hình ảnh theo ý muốn */
+}
+
+.hero-solution .content-flex-left img:hover {
+	transition: all .50s ease;
+	transform: translateX(10px);
+	filter: brightness(70%); /* Điều chỉnh giá trị brightness để làm mờ hình ảnh theo ý muốn */
+}
+
+.content-flex-center img:hover,
+.container-logo-hethong .row .col img:hover {
+	transition: all .50s ease;
+	transform: translateY(-10px);
+	filter: brightness(70%); /* Điều chỉnh giá trị brightness để làm mờ hình ảnh theo ý muốn */
+}
+
+/* CSS cho màn hình nhỏ hơn 768px (di động) */
+@media screen and (max-width: 768px) {
+	.content-solution h5 {
+		font-size: 15px;
+	}
+	.hero-solution .logo {
+		text-align: center;
+	}
+  .hero-solution .content-flex-right,
+  .hero-solution .content-flex-left {
+    flex-direction: column;
+    align-items: center; /* Căn giữa các phần tử */
+  }
+
+  .hero-solution .content-flex-right .content-solution,
+  .hero-solution .content-flex-left .content-solution,
+	.hero-solution .content-flex-right .content-solution h5,
+  .hero-solution .content-flex-left .content-solution h5 {
+		margin-left: 10px ;
+		margin-bottom: 0px;
+    width: 90%; /* Chiếm toàn bộ chiều rộng */
+  }
+
+	.hero-solution .content-flex-right .content-solution p,
+	.hero-solution .content-flex-left .content-solution p {
+		font-size: 12px;
+	}
+
+  .hero-solution .content-flex-right img,
+  .hero-solution .content-flex-left img {
+    width: 90%; /* Chiếm toàn bộ chiều rộng */
+  }
+
+	.hero-solution .content-flex-center {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+
+/* IPAD */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.content-solution h5 {
+		font-size: 20px;
+	}
+	.content-flex-right,
+	.content-flex-left {
+		padding: 10px;
+	}
+	.hero-solution .content-flex-center {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+
 /* END Solutions */
 
 /* Project */
@@ -293,9 +433,10 @@ header .navlist {
   }
 }
 
+/* IPAD */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 	.content-project h5 {
-		font-size: 11px;
+		font-size: 20px;
 	}
 	.content-flex-right,
 	.content-flex-left {

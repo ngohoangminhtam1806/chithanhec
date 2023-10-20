@@ -82,7 +82,9 @@ scrollableContent.addEventListener('wheel', (e) => {
 });
 
 // Introduce
-sr.reveal('.carousel', {deplay: 500, origin: 'top'});
+sr.reveal('.hero-introduce .logo h2', {deplay: 200, origin: 'top'});
+sr.reveal('.hero-introduce .logo h6', {deplay: 200, origin: 'left'});
+sr.reveal('.hero-introduce .logo img', {deplay: 200, origin: 'right'});
 
 if (isMobile()) {
 	sr.reveal('.hero-introduce', {deplay: 500, origin: 'bottom'});
@@ -92,6 +94,10 @@ if (isMobile()) {
 sr.reveal('.hero-solution .logo h2', {deplay: 200, origin: 'top'});
 sr.reveal('.hero-solution .logo h6', {deplay: 200, origin: 'left'});
 sr.reveal('.hero-solution .logo img', {deplay: 200, origin: 'right'});
+
+if (isDesktop()) {
+	sr.reveal('.hero-solution', {deplay: 200, origin: 'top'});
+}
 
 // Project
 sr.reveal('.hero-project .logo h6', {deplay: 200, origin: 'left'});
