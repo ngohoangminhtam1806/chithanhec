@@ -26,69 +26,23 @@ function isDesktop() {
 function isMobile() {
   return window.innerWidth < 768;
 }
+// Home
+// sr.reveal('.hero-home .row', {deplay: 200, origin: 'top'});
 
-// Kích hoạt lăn chuột bằng JavaScript
-const scrollableContent = document.querySelector('.scrollable-content');
-let isScrolling = false;
-let startY = 0;
-let scrollY = 0;
+// document.addEventListener('DOMContentLoaded', function() {
+//   const video = document.getElementById('myVideo');
 
-scrollableContent.addEventListener('mousedown', (e) => {
-  isScrolling = true;
-  startY = e.clientY;
-  e.preventDefault();
-});
-
-scrollableContent.addEventListener('mouseup', () => {
-  isScrolling = false;
-  startY = 0;
-  scrollY = 0;
-});
-
-scrollableContent.addEventListener('mousemove', (e) => {
-  if (isScrolling) {
-    const deltaY = startY - e.clientY;
-    scrollableContent.scrollTop += deltaY;
-    startY = e.clientY;
-  }
-});
-
-scrollableContent.addEventListener('touchstart', (e) => {
-  isScrolling = true;
-  startY = e.touches[0].clientY;
-  e.preventDefault();
-});
-
-scrollableContent.addEventListener('touchend', () => {
-  isScrolling = false;
-  startY = 0;
-  scrollY = 0;
-});
-
-scrollableContent.addEventListener('touchmove', (e) => {
-  if (isScrolling) {
-    const deltaY = startY - e.touches[0].clientY;
-    scrollY += deltaY;
-    if (Math.abs(scrollY) >= 5) {
-      scrollableContent.scrollTop += deltaY;
-      startY = e.touches[0].clientY;
-      scrollY = 0;
-    }
-  }
-});
-
-scrollableContent.addEventListener('wheel', (e) => {
-  scrollableContent.scrollTop += e.deltaY;
-});
+//   video.addEventListener('ended', function() {
+//     // Bắt đầu lại video khi nó kết thúc
+//     video.play();
+//   });
+// });
 
 // Introduce
 sr.reveal('.hero-introduce .logo h2', {deplay: 200, origin: 'top'});
 sr.reveal('.hero-introduce .logo h6', {deplay: 200, origin: 'left'});
 sr.reveal('.hero-introduce .logo img', {deplay: 200, origin: 'right'});
-
-if (isMobile()) {
-	sr.reveal('.hero-introduce', {deplay: 500, origin: 'bottom'});
-}
+sr.reveal('.hero-introduce', {deplay: 500, origin: 'bottom'});
 
 // Solution
 sr.reveal('.hero-solution .logo h2', {deplay: 200, origin: 'top'});
@@ -96,7 +50,10 @@ sr.reveal('.hero-solution .logo h6', {deplay: 200, origin: 'left'});
 sr.reveal('.hero-solution .logo img', {deplay: 200, origin: 'right'});
 
 if (isDesktop()) {
-	sr.reveal('.hero-solution', {deplay: 200, origin: 'top'});
+	sr.reveal('.hero-solution .content-flex-right', {deplay: 200, origin: 'right'});
+	sr.reveal('.hero-solution .content-flex-left', {deplay: 200, origin: 'left'});
+	sr.reveal('.hero-solution .content-flex-center', {deplay: 200, origin: 'top'});
+	sr.reveal('.hero-solution .container-logo-hethong', {deplay: 200, origin: 'bottom'});
 }
 
 // Project
@@ -104,7 +61,8 @@ sr.reveal('.hero-project .logo h6', {deplay: 200, origin: 'left'});
 sr.reveal('.hero-project .logo img', {deplay: 200, origin: 'right'});
 
 if (isDesktop()) {
-	sr.reveal('.hero-project', {deplay: 200, origin: 'bottom'});
+	sr.reveal('.hero-project .content-flex-right', {deplay: 200, origin: 'right'});
+	sr.reveal('.hero-project .content-flex-left', {deplay: 200, origin: 'left'});
 }
 
 // Contact

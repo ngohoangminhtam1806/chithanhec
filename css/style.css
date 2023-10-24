@@ -23,7 +23,7 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 33px 9%;
+	padding: 0px 9%;
 	background: transparent;
 }
 
@@ -41,8 +41,8 @@ header {
 }
 
 .navlist a:hover {
-	color: #007fff;
-	border-bottom: 2px solid #007fff;
+	color: red;
+	border-bottom: 2px solid red;
 }
 
 #menu-icon {
@@ -98,7 +98,8 @@ section {
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;
 	gap: 2rem;
-	background: linear-gradient(245.59deg, #007fff 0%, #78c9d3 28.53%, #d4ffaa 75.52%);
+  background: linear-gradient(245.59deg, #0600ff 0%, #00f4fd 75.52%);
+	/* background: linear-gradient(245.59deg, #007fff 0%, #78c9d3 28.53%, #d4ffaa 75.52%); */
 }
 
 .hero-text h5 {
@@ -130,9 +131,10 @@ section {
 	margin-bottom: 40px;
 }
 
-.hero-text img {
+.hero-video video {
 	width: 700px;
 	height: auto;
+	border-radius: 10px;
 }
 
 .hero-text a {
@@ -218,7 +220,7 @@ section {
 }
 
 @media (max-width: 1340px) {
-  .hero-img img {
+  .hero-video video {
     width: 100%;
     height: auto;
   }
@@ -239,10 +241,10 @@ section {
   .hero-text {
     padding-top: 115px;
   }
-  .hero-img {
+  .hero-video {
     text-align: center;
   }
-  .hero-img img {
+  .hero-video video {
     width: 560px;
     height: auto;
   }
@@ -264,7 +266,7 @@ section {
 }
 
 @media (max-width: 680px) {
-  .hero-img img {
+  .hero-video video {
     width: 100%;
     height: auto;
   }

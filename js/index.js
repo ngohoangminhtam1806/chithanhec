@@ -19,12 +19,6 @@ const sr = ScrollReveal ({
 	reset: true,
 });
 
-// Kích hoạt lăn chuột bằng JavaScript
-document.querySelector('.scrollable-content').addEventListener('wheel', (e) => {
-	const element = document.querySelector('.scrollable-content');
-	element.scrollTop += e.deltaY;
-});
-
 // Index
 
 // Lấy phần tử nút "scroll-down" và phần tử "message-list"
