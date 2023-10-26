@@ -42,7 +42,6 @@ function isMobile() {
 sr.reveal('.hero-introduce .logo h2', {deplay: 200, origin: 'top'});
 sr.reveal('.hero-introduce .logo h6', {deplay: 200, origin: 'left'});
 sr.reveal('.hero-introduce .logo img', {deplay: 200, origin: 'right'});
-sr.reveal('.hero-introduce', {deplay: 500, origin: 'bottom'});
 
 // Solution
 sr.reveal('.hero-solution .logo h2', {deplay: 200, origin: 'top'});
@@ -57,6 +56,7 @@ if (isDesktop()) {
 }
 
 // Project
+sr.reveal('.hero-project .logo h2', {deplay: 200, origin: 'top'});
 sr.reveal('.hero-project .logo h6', {deplay: 200, origin: 'left'});
 sr.reveal('.hero-project .logo img', {deplay: 200, origin: 'right'});
 
