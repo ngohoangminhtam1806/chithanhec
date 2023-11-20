@@ -97,7 +97,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2rem;
-  background: linear-gradient(245.59deg, #0600ff 0%, #00f4fd 75.52%);
+  background: linear-gradient(245.59deg, #1E90FF 0%, #E0FFFF 75.52%);
 }
 
 .hero-text h5 {
@@ -132,7 +132,7 @@ section {
 .hero-video video {
   width: 700px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 .hero-text a {

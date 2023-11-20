@@ -53,7 +53,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0px 9%;
-  background: #6495ED;
+  background: linear-gradient(245.59deg, #0000FF 0%, #87CEFA 75.52%);
 	.navlist {
 		margin-bottom: 0px;
 		display: flex;
@@ -153,7 +153,7 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
 
 .hero-home {
 	margin-top: 40px;
-	.row {
+	.row-first {
 		margin-right: 0;
 		padding-left: 10px;
 		h5 {
@@ -162,26 +162,32 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
 			text-align: center;
 			color: #007fff;
 		}
-		p,
-		.order-last p {
+		p {
 			margin-bottom: 0;
 			text-align: center;
 			font-size: 16px;
 		}
-		.order-last .row {
-			gap: 5%;
-			margin: 0;
-			place-content: center;
-			text-align-last: center;
-			display: flex;
-			.col {
-				width: unset;
-				padding: 0;
-				i {
-					color: #007fff;
+		.col-last {
+			.row-row-last {
+				gap: 5%;
+				margin: 0;
+				place-content: center;
+				text-align-last: center;
+				display: flex;
+				.col-col-last {
+					width: unset;
+					padding: 0;
+					i {
+						color: #007fff;
+					}
 				}
 			}
-		}
+			p {
+				margin-bottom: 0;
+				text-align: center;
+				font-size: 16px;
+			}
+		} 
 	}
 	.container-media {
 		margin-top: 50px;
@@ -237,7 +243,6 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
 		}
 	}
 	.container-end {
-		background: #E6E8F6;
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -246,7 +251,6 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
 		.row {
 			text-align: center;
 			margin-bottom: 1%;
-			margin-right: 0;
 		}
 		.col-sm .home-item {
 			position: relative;
@@ -300,7 +304,7 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
   .hero-home {
     margin-top: 0;
 
-    .row {
+    .row-first {
       padding: 0;
       margin: 0;
       .col {
@@ -315,6 +319,7 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
       margin-top: 10%;
 			height: 500px;
       .row-cols-2 {
+				margin-left: 0;
 				height: 100%;
 				place-content: unset;
 				padding: unset;
@@ -333,7 +338,7 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
 
         .col {
           width: 100%;
-					height: 60%;
+					height: 55%;
 					margin-top: unset;
           .container {
             .row-cols-2 {
@@ -356,14 +361,17 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
       }
     }
 
-    .container-end .row .col-sm {
-			padding: 0 0;
-      padding-bottom: 25px;
-			.home-item img {
-				height: 250px;
-				width: 100%;
+    .container-end {
+			padding-bottom: unset;
+			.row .col-sm {
+				padding: 0 0;
+				padding-bottom: 25px;
+				.home-item img {
+					height: 250px;
+					width: 100%;
+				}
 			}
-    }
+		} 
   }
 }
 // IPAD

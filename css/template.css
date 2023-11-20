@@ -51,7 +51,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0px 9%;
-  background: #6495ED;
+  background: linear-gradient(245.59deg, #0000FF 0%, #87CEFA 75.52%);
 }
 header .navlist {
   margin-bottom: 0px;
@@ -150,23 +150,22 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
 .hero-home {
   margin-top: 40px;
 }
-.hero-home .row {
+.hero-home .row-first {
   margin-right: 0;
   padding-left: 10px;
 }
-.hero-home .row h5 {
+.hero-home .row-first h5 {
   margin-top: 10%;
   font-size: 22px;
   text-align: center;
   color: #007fff;
 }
-.hero-home .row p,
-.hero-home .row .order-last p {
+.hero-home .row-first p {
   margin-bottom: 0;
   text-align: center;
   font-size: 16px;
 }
-.hero-home .row .order-last .row {
+.hero-home .row-first .col-last .row-row-last {
   gap: 5%;
   margin: 0;
   place-content: center;
@@ -174,12 +173,17 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
        text-align-last: center;
   display: flex;
 }
-.hero-home .row .order-last .row .col {
+.hero-home .row-first .col-last .row-row-last .col-col-last {
   width: unset;
   padding: 0;
 }
-.hero-home .row .order-last .row .col i {
+.hero-home .row-first .col-last .row-row-last .col-col-last i {
   color: #007fff;
+}
+.hero-home .row-first .col-last p {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 16px;
 }
 .hero-home .container-media {
   margin-top: 50px;
@@ -240,7 +244,6 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
   opacity: 1;
 }
 .hero-home .container-end {
-  background: #E6E8F6;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -250,7 +253,6 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
 .hero-home .container-end .row {
   text-align: center;
   margin-bottom: 1%;
-  margin-right: 0;
 }
 .hero-home .container-end .col-sm .home-item {
   position: relative;
@@ -300,14 +302,14 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
   .hero-home {
     margin-top: 0;
   }
-  .hero-home .row {
+  .hero-home .row-first {
     padding: 0;
     margin: 0;
   }
-  .hero-home .row .col {
+  .hero-home .row-first .col {
     flex: unset;
   }
-  .hero-home .row .col p {
+  .hero-home .row-first .col p {
     font-size: 15px;
   }
   .hero-home .container-media {
@@ -315,6 +317,7 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
     height: 500px;
   }
   .hero-home .container-media .row-cols-2 {
+    margin-left: 0;
     height: 100%;
     place-content: unset;
     padding: unset;
@@ -333,7 +336,7 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
   }
   .hero-home .container-media .row-cols-2 .col {
     width: 100%;
-    height: 60%;
+    height: 55%;
     margin-top: unset;
   }
   .hero-home .container-media .row-cols-2 .col .container .row-cols-2 .col {
@@ -346,6 +349,9 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
     color: #000;
     background: unset;
     opacity: 1;
+  }
+  .hero-home .container-end {
+    padding-bottom: unset;
   }
   .hero-home .container-end .row .col-sm {
     padding: 0 0;

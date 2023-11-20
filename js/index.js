@@ -47,7 +47,6 @@ scrollDownButton.addEventListener('click', (event) => {
 	}
 });
 
-
 sr.reveal('.hero-text', {deplay: 200, origin: 'top'});
 sr.reveal('.hero-img', {deplay: 450, origin: 'top'});
 sr.reveal('.icons', {deplay: 500, origin: 'left'});
