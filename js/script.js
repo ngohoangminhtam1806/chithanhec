@@ -26,17 +26,6 @@ function isDesktop() {
 function isMobile() {
   return window.innerWidth < 768;
 }
-// Home
-// sr.reveal('.hero-home .row', {deplay: 200, origin: 'top'});
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   const video = document.getElementById('myVideo');
-
-//   video.addEventListener('ended', function() {
-//     // Bắt đầu lại video khi nó kết thúc
-//     video.play();
-//   });
-// });
 
 // Introduce
 sr.reveal('.hero-introduce .logo h2', {deplay: 200, origin: 'top'});
@@ -49,8 +38,8 @@ sr.reveal('.hero-solution .logo h6', {deplay: 200, origin: 'left'});
 sr.reveal('.hero-solution .logo img', {deplay: 200, origin: 'right'});
 
 if (isDesktop()) {
-	sr.reveal('.hero-solution .content-flex-right', {deplay: 200, origin: 'right'});
-	sr.reveal('.hero-solution .content-flex-left', {deplay: 200, origin: 'left'});
+	// sr.reveal('.hero-solution .content-flex-right', {deplay: 200, origin: 'right'});
+	// sr.reveal('.hero-solution .content-flex-left', {deplay: 200, origin: 'left'});
 	sr.reveal('.hero-solution .content-flex-center', {deplay: 200, origin: 'top'});
 	sr.reveal('.hero-solution .container-logo-hethong', {deplay: 200, origin: 'bottom'});
 }
@@ -61,8 +50,8 @@ sr.reveal('.hero-project .logo h6', {deplay: 200, origin: 'left'});
 sr.reveal('.hero-project .logo img', {deplay: 200, origin: 'right'});
 
 if (isDesktop()) {
-	sr.reveal('.hero-project .content-flex-right', {deplay: 200, origin: 'right'});
-	sr.reveal('.hero-project .content-flex-left', {deplay: 200, origin: 'left'});
+	// sr.reveal('.hero-project .content-flex-right', {deplay: 200, origin: 'right'});
+	// sr.reveal('.hero-project .content-flex-left', {deplay: 200, origin: 'left'});
 }
 
 // Contact
