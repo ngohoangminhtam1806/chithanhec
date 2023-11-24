@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @charset "UTF-8";
 * {
   padding: 0;
@@ -404,10 +405,97 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
 .hero-introduce .logo img {
   width: 50px;
 }
+=======
+/* Điều chỉnh font-size cho tiêu đề khi kích thước màn hình nhỏ hơn 768px */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
+/* Đảm bảo hình ảnh không vượt quá chiều rộng của trang và được căn giữa */
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Điều chỉnh khoảng cách dưới đoạn văn bản */
+p {
+  margin-bottom: 10px;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	list-style: none;
+	text-decoration: none;
+}
+
+header {
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 33px 9%;
+	background: linear-gradient(245.59deg, #007fff 0%, #78c9d3 28.53%, #d4ffaa 75.52%);
+}
+
+.logo {
+	font-size: 30px;
+	font-weight: 700;
+	color: black;
+}
+
+.navlist {
+	display: flex;
+}
+
+.navlist a{
+	color: black;
+	margin-left: 60px;
+	font-size: 15px;
+	font-weight: 600;
+	border-bottom: 2px solid transparent;
+	transition: all .55s ease;
+}
+
+.navlist a:hover {
+	color: #007fff;
+	border-bottom: 2px solid #007fff;
+}
+
+#menu-icon {
+	color: black;
+	font-size: 30px;
+	z-index: 10001;
+	cursor: pointer;
+	display: none;
+}
+
+.hero-introduce {
+  margin-top: 200px;
+  display: block;
+  max-width: 100%;
+}
+
+.hero-introduce h2 {
+  text-align: center;
+  color: #007fff;
+}
+
+>>>>>>> afb923b571591e5d81493ba19517ce4a03740b49
 .hero-introduce p,
 .hero-introduce ul,
 .hero-introduce strong h5 {
   margin-left: 185px;
+<<<<<<< HEAD
   margin-right: 185px;
 }
 .hero-introduce img {
@@ -733,3 +821,74 @@ footer section .social-icons .ri-facebook-circle-fill:hover {
 }
 
 /* END Contact *//*# sourceMappingURL=template.css.map */
+=======
+	margin-right: 185px;
+}
+
+.hero-introduce img {
+  width: 70%;
+}
+
+.container {
+  max-width: 1200px; /* Điều chỉnh kích thước tối đa của container */
+  margin: 0 auto; /* Căn giữa container */
+  padding: 20px; /* Thêm khoảng cách xung quanh container nếu cần */
+}
+
+/* Điều chỉnh font-size và lề cho các kích thước màn hình khác nhau */
+@media screen and (max-width: 768px) {
+  .hero-introduce h2 {
+    font-size: 24px;
+  }
+  .hero-introduce p,
+  .hero-introduce ul,
+  .hero-introduce strong h5 {
+    margin-left: 10px; /* Loại bỏ lề trái */
+		margin-right: 10px;
+  }
+	.hero-introduce img {
+		width: 90%;
+	}
+}
+
+@media (max-width: 990px) {
+	#menu-icon {
+		display: block;
+	}
+	.navlist {
+		position: absolute;
+		top: 100%;
+		border-radius: 15px;
+		right: -100%;
+		width: 300px;
+		height: 40vh;
+    backdrop-filter: blur(10px);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: 50px 20px;
+		transition: all .55s ease;
+	}
+	.navlist a {
+		display: block;
+		margin: 7px 0;
+		margin-left: 0;
+	}
+	.navlist.open {
+		right: 0;
+	}
+}
+
+.social-icons .ri-youtube-fill,
+.social-icons .ri-facebook-circle-fill {
+  font-size: 34px;
+}
+
+.social-icons .ri-youtube-fill:hover {
+  color: #ff0000;
+}
+
+.social-icons .ri-facebook-circle-fill:hover {
+  color: #0866ff;
+}
+>>>>>>> afb923b571591e5d81493ba19517ce4a03740b49
